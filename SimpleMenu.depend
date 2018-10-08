@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1538935964 source:c:\users\vkaresz6\desktop\projects\simplemenu\main.cpp
+	<iostream>
+	<string>
+	<iomanip>
+	<vector>
+	<conio.h>
+	<windows.h>
+	<stdlib.h>
+	<exception>
+
