@@ -63,10 +63,16 @@ while(true)
 {
     keyhit = getch();
 
-    if(keyhit==224)
+    if(keyhit==80)
     {
         if(pos==s.size()-1)pos=-1;
         pos++;
+        initMenu(s, pos);
+
+    }if(keyhit==72)
+    {
+        if(pos==0)pos=s.size();
+        pos--;
         initMenu(s, pos);
 
     }else if(keyhit==13)
@@ -85,7 +91,12 @@ while(true)
 return-1;
 }
 
+int menuhandler2(std::vector<string> s)
+{
 
+
+return 0;
+}
 
 
 int main()
