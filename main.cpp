@@ -88,7 +88,7 @@ while(true)
 
     }
 }
-return-1;
+return 0;
 }
 
 int menuhandler2(std::vector<string> s)
