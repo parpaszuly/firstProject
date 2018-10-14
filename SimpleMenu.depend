@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1539511512 source:c:\users\vkaresz6\desktop\projects\simplemenu\main.cpp
+1539540853 source:c:\users\vkaresz6\desktop\projects\simplemenu\main.cpp
 	<iostream>
 	<string>
 	<iomanip>
@@ -9,7 +9,6 @@
 	<stdlib.h>
 	<exception>
 	<menu.h>
-	<game.h>
 
 1539181088 source:g:\projects\simpleconsolemenucpp\main.cpp
 	<iostream>

@@ -7,12 +7,12 @@
 #include <stdlib.h>
 #include <exception>
 #include <menu.h>
-#include <game.h>
+
 using namespace std;
 
 int main()
 {
-    game game;
+//    game game;
     menu mymenu;
     int cursorpos;
     std::vector<string> myVector;
@@ -34,7 +34,7 @@ while(true)
     if(cursorpos==0)
     {
         system("cls");
-        game.gameMain();
+        //game.gameMain();
         getch();
     }
     if(cursorpos==1)
