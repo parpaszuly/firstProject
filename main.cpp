@@ -7,28 +7,34 @@
 #include <stdlib.h>
 #include <exception>
 #include <menu.h>
+#include <game.h>
 using namespace std;
 
 int main()
 {
+    game game;
     menu mymenu;
     int cursorpos;
     std::vector<string> myVector;
     myVector.push_back("a");
     myVector.push_back("b");
     myVector.push_back("c");
+    myVector.push_back("casdfgadg");
+    myVector.push_back("c");
+    myVector.push_back("csad");
     myVector.push_back("c");
     myVector.push_back("c");
     myVector.push_back("c");
+    myVector.push_back("casdfgadg");
     myVector.push_back("c");
-    myVector.push_back("c");
+    myVector.push_back("csad");
 while(true)
     {
     cursorpos = mymenu.menuhandler(myVector);
     if(cursorpos==0)
     {
         system("cls");
-        cout<<"Ez egy A volt";
+        game.gameMain();
         getch();
     }
     if(cursorpos==1)

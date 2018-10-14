@@ -8,43 +8,91 @@
 #include <stdlib.h>
 #include <exception>
 
+HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+
+
 void centered(std::string str, bool inpos)
 {
-    for(int i=0;i<40;i++) std::cout<<" ";
-    int console_width = 40;
-    int len = str.length();
-    if(len%2==0) str += " ";
+    for(int i=0;i<45; i++)
+    {
+        std::cout<<" ";
+    }
+    SetConsoleTextAttribute(console,170);
+    std::cout<<"##";
+    SetConsoleTextAttribute(console,7);
     if(inpos)
     {
-        std::cout<<std::setw((console_width/2)+len/2)\
-    <<std::right<<str<<"  *";
+        SetConsoleTextAttribute(console, 23);
     }
-    else{
-        std::cout<<std::setw((console_width/2)+len/2)\
-    <<std::right<<str;
+    std::cout<<str;
+    for(int i=0;i<25-str.size()+1;i++)
+    {
+        std::cout<<" ";
     }
-    for(int i=0;i<40;i++) std::cout<<" ";
-    std::cout << std::endl;
+    if(inpos)
+    {
+        SetConsoleTextAttribute(console,7);
+    }
+    SetConsoleTextAttribute(console,170);
+    std::cout<<"##";
+    SetConsoleTextAttribute(console,7);
+    std::cout<<std::endl;
 }
+
 
 
 void initMenu(std::vector<std::string> s, int pos)
 {
+
+
+
+
+
 
     if(s.size()>0)
     {
         system("cls");
         int i = s.size();
         std::cout<<std::endl<<std::endl<<std::endl<<std::endl<<std::endl<<std::endl;
+        for(int j=0;j<2;j++)
+        {
+        for(int i=0;i<45; i++)
+        {
+            std::cout<<" ";
+        }
+        SetConsoleTextAttribute(console,170);
+        for(int i=0;i<30; i++)
+        {
+            std::cout<<"#";
+        }
+        SetConsoleTextAttribute(console,7);
+        std::cout<<std::endl;
+        }
         for(int j = 0;j<i;j++)
         {
         if(pos==j)
         {
+
             centered(s[j], true);
+
         }
         else{
             centered(s[j], false);
         }
+        }
+        for(int j=0;j<2;j++)
+        {
+        for(int i=0;i<45; i++)
+        {
+            std::cout<<" ";
+        }
+        SetConsoleTextAttribute(console,170);
+        for(int i=0;i<30; i++)
+        {
+            std::cout<<"#";
+        }
+        SetConsoleTextAttribute(console,7);
+        std::cout<<std::endl;
         }
     }
 
@@ -85,12 +133,5 @@ while(true)
 
     }
 }
-return 0;
-}
-
-int menuhandler2(std::vector<std::string> s)
-{
-
-
 return 0;
 }
